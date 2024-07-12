@@ -1,17 +1,17 @@
 export function MostTotalMedalsPie() {
-    return (<iframe src="/python/graphs/most_total_medals_pie.html" width={900} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_total_medals_pie.html" width={700} height={500} className=""></iframe>)
 }
 
 export function MostGoldMedalsPie() {
-    return (<iframe src="/python/graphs/most_gold_medals_pie.html" width={900} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_gold_medals_pie.html" width={700} height={500} className=""></iframe>)
 }
 
 export function MostSilverMedalsPie() {
-    return (<iframe src="/python/graphs/most_silver_medals_pie.html" width={900} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_silver_medals_pie.html" width={700} height={500} className=""></iframe>)
 }
 
 export function MostBronzeMedalsPie() {
-    return (<iframe src="/python/graphs/most_bronze_medals_pie.html" width={900} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_bronze_medals_pie.html" width={700} height={500} className=""></iframe>)
 }
 
 export function DistributionMedalsRadar() {
