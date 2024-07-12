@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import plotly.express as px # plotly.express
+import plotly.graph_objects as go
 import matplotlib.pyplot as plt # matplotlib
 
 # scikit-learn
@@ -43,6 +44,7 @@ most_total_medals_pie.update_layout({
     'paper_bgcolor': 'rgba(0, 0, 0, 0)',
     'font_color': 'white',
     'title': 'Top 10 countries with the most medals in total',
+    'title_x': 0.4
 })
 
 most_total_medals_pie.write_html("public/python/graphs/most_total_medals_pie.html")
@@ -57,6 +59,7 @@ most_gold_medals_pie.update_layout({
     'paper_bgcolor': 'rgba(0, 0, 0, 0)',
     'font_color': 'white',
     'title': 'Top 10 countries with the most Gold medals',
+    'title_x': 0.4
 })
 
 most_gold_medals_pie.write_html("public/python/graphs/most_gold_medals_pie.html")
@@ -71,6 +74,7 @@ most_silver_medals_pie.update_layout({
     'paper_bgcolor': 'rgba(0, 0, 0, 0)',
     'font_color': 'white',
     'title': 'Top 10 countries with the most Silver medals',
+    'title_x': 0.4
 })
 
 most_silver_medals_pie.write_html("public/python/graphs/most_silver_medals_pie.html")
@@ -85,9 +89,96 @@ most_bronze_medals_pie.update_layout({
     'paper_bgcolor': 'rgba(0, 0, 0, 0)',
     'font_color': 'white',
     'title': 'Top 10 countries with the most Bronze medals',
+    'title_x': 0.4
 })
 
 most_bronze_medals_pie.write_html("public/python/graphs/most_bronze_medals_pie.html")
+
+
+# Distribution of medals by top five countries with the most medals
+# Define the data
+categories = ["USA", "Republic of China", "Russia Olympic Committee", "Great Britain", "Japan"]
+united_states_of_america = [39, 41, 33, 113]
+peoples_republic_of_china = [38, 32, 18, 88]
+roc = [20, 28, 23, 71]
+great_britain = [22, 21, 22, 65]
+japan = [27, 14, 17, 58]
+total = [113,88,71,65,58]
+gold = [39,38,20,22,27]
+silver = [41,32,28,21,14]
+bronze = [33,18,23,22,17]
+
+
+distribution_medals_radar = go.Figure()
+
+distribution_medals_radar.add_trace(go.Scatterpolar(
+    r=total,
+    theta=categories,
+    fill='toself',
+    name='United States of America',
+    line_color='blue'
+))
+
+distribution_medals_radar.add_trace(go.Scatterpolar(
+    r=gold,
+    theta=categories,
+    fill='toself',
+    name='Republic of China',
+    line_color='yellow'
+))
+
+distribution_medals_radar.add_trace(go.Scatterpolar(
+    r=silver,
+    theta=categories,
+    fill='toself',
+    name='Russia Olympic Committee',
+    line_color='grey'
+))
+
+
+distribution_medals_radar.add_trace(go.Scatterpolar(
+    r=bronze,
+    theta=categories,
+    fill='toself',
+    name='Japan',
+    line_color='brown'
+))
+
+distribution_medals_radar.update_layout(
+    polar=dict(
+        radialaxis=dict(
+            visible=True,
+            range=[0, 120]
+        )),
+        showlegend=True,
+)
+
+distribution_medals_radar.update_layout({
+    'title': 'Distribution of medals by top five countries with the most medals',
+    'title_x': 0.4,
+    'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+    'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+    'font_color': 'white'
+})
+
+distribution_medals_radar.write_html("public/python/graphs/distribution_medals_radar.html")
+
+
+# Medals won by each country // Gold, Silver, Bronze
+medals_per_country_bar = px.bar(df_medals, x='Team/NOC', y=['Gold', 'Silver', 'Bronze'], color_discrete_sequence =['gold', 'silver', 'brown'])
+
+medals_per_country_bar.update_layout({
+    'title': 'Number of medals won by each country',
+    'title_x': 0.5,
+    'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+    'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+    'font_color': 'white',
+    'xaxis_showgrid': False,
+    'yaxis_showgrid': False,
+})
+
+medals_per_country_bar.write_html("public/python/graphs/medals_per_country_bar.html")
+
 
 # Calculate counts
 athletes_count = df_athletes['NOC'].value_counts().reset_index()
@@ -130,7 +221,6 @@ combined_df = combined_df.sort_values('Predicted_Total_Medals', ascending=False)
 # Display the top predictions
 combined_df[['NOC', 'Athlete_Count', 'Predicted_Total_Medals']].head(10)
 
-
 # Predicted TOP10 Countries by Predicted Total Medals in 2024 Olympics
 top_10_predictions = combined_df.head(10)
 linear_regression_bar = px.histogram(top_10_predictions, x="NOC", y="Predicted_Total_Medals")
@@ -144,6 +234,7 @@ linear_regression_bar.update_layout({
     'yaxis_title': 'Predicted Total Medals',
     'xaxis_title': 'Country (NOC)',
     'title': 'Top 10 Countries by Predicted Total Medals in 2024 Olympics',
+    'title_x': 0.5
 })
 
 linear_regression_bar.write_html('public/python/graphs/linear_regression_bar.html')
@@ -160,6 +251,7 @@ linear_regression_scatter.update_layout({
     'yaxis_title': 'Predicted Total Medals',
     'xaxis_title': 'Number of Athletes',
     'title': 'Number of Athletes vs. Predicted Total Medals',
+    'title_x': 0.5
 })
 
 linear_regression_scatter.write_html('public/python/graphs/linear_regression_scatter.html')
@@ -227,6 +319,7 @@ random_forest_bar.update_layout({
     'yaxis_title': 'Predicted Total Medals',
     'xaxis_title': 'Country (NOC)',
     'title': 'Top 10 Countries by Predicted Total Medals in 2024 Olympics',
+    'title_x': 0.5
 })
 
 random_forest_bar.write_html('public/python/graphs/random_forest_bar.html')
@@ -243,6 +336,7 @@ random_forest_scatter.update_layout({
     'yaxis_title': 'Predicted Total Medals',
     'xaxis_title': 'Number of Athletes',
     'title': 'Number of Athletes vs. Predicted Total Medals',
+    'title_x': 0.5
 })
 
 random_forest_scatter.write_html('public/python/graphs/random_forest_scatter.html')

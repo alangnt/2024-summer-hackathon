@@ -14,6 +14,14 @@ export function MostBronzeMedalsPie() {
     return (<iframe src="/python/graphs/most_bronze_medals_pie.html" width={900} height={500} className=""></iframe>)
 }
 
+export function DistributionMedalsRadar() {
+    return (<iframe src="/python/graphs/distribution_medals_radar.html" width={1200} height={700} className=""></iframe>)
+}
+
+export function MedalsPerCountryBar() {
+    return (<iframe src="/python/graphs/medals_per_country_bar.html" width={1500} height={700} className=""></iframe>)
+}
+
 export function LinearRegressionBar() {
     return (<iframe src="/python/graphs/linear_regression_bar.html" width={900} height={500} className=""></iframe>)
 }

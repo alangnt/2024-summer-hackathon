@@ -1,35 +1,45 @@
 import * as Graphs from "@/comps/graphs";
+import Image from "next/image";
 
 export default function Home() {
 
     return (
-        <main className="flex flex-col grow items-center">
-            <h3>Olympic Sages is a website made by three people, Milan, Conrad and Alan. It features some predictions for the 2024 Paris Summer Olympic winners</h3>
+        <main className="flex flex-col grow items-center gap-12">
+            <h3 className="text-center">Olympic Sages is a website made by three people, Milan, Conrad and Alan. It features some predictions for the 2024 Paris Summer Olympic winners</h3>
 
             {/* Section containing the four pies with TOT, GOLD, SILVER and BRONZE Counts */}
-            <section className="flex w-screen flex-wrap">
-
+            <section className="flex justify-center w-screen flex-wrap">
                 <Graphs.MostTotalMedalsPie />
-
                 <Graphs.MostGoldMedalsPie />
-
                 <Graphs.MostSilverMedalsPie />
-
                 <Graphs.MostBronzeMedalsPie />
-
             </section>
 
-            <h3>First, we tried to predict the winners using the Linear Regression method</h3>
+            <Graphs.DistributionMedalsRadar />
 
-            <Graphs.LinearRegressionBar />
+            <Graphs.MedalsPerCountryBar />
 
-            <Graphs.LinearRegressionScatter />
+            <Image src="/gold.png" alt="Gold medal pixelated" width={75} height={75}></Image>
 
-            <h3>Now, let's try again using the Random Forest method, -- EXPLAIN WHAT THIS IS</h3>
+            <section>
+                <h3 className="text-center">First, we tried to predict the winners using the Linear Regression method</h3>
 
-            <Graphs.RandomForestBar />
+                <article className="flex justify-center w-screen flex-wrap">
+                    <Graphs.LinearRegressionBar />
+                    <Graphs.LinearRegressionScatter />
+                </article>
+            </section>
 
-            <Graphs.RandomForestScatter />
-        </main>
+            <Image src="/silver.png" alt="Silver medal pixelated" width={75} height={75}></Image>
+
+            <section className="text-center">
+                <h3>Now, let's try again using the Random Forest method, -- EXPLAIN WHAT THIS IS</h3>
+
+                <article className="flex justify-center w-screen flex-wrap">
+                    <Graphs.RandomForestBar />
+                    <Graphs.RandomForestScatter />
+                </article>
+            </section>
+        </main >
     )
 }
