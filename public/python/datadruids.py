@@ -109,51 +109,64 @@ distribution_medals_radar = go.Figure()
 distribution_medals_radar.add_trace(go.Scatterpolar(
     r=total,
     theta=categories,
-    fill='toself',
     name='Total',
-    line_color='blue'
+    fill='toself',
+    fillcolor='blue',
+    line=None,
+    mode='markers',
+    marker_color='blue'
 ))
 
 distribution_medals_radar.add_trace(go.Scatterpolar(
     r=gold,
     theta=categories,
-    fill='toself',
     name='Gold',
-    line_color='yellow'
+    fill='toself',
+    fillcolor='yellow',
+    line=None,
+    mode='markers',
+    marker_color='yellow'
 ))
 
 distribution_medals_radar.add_trace(go.Scatterpolar(
     r=silver,
     theta=categories,
-    fill='toself',
     name='Silver',
-    line_color='grey'
+    fill='toself',
+    fillcolor='grey',
+    line=None,
+    mode='markers',
+    marker_color='grey'
 ))
 
 
 distribution_medals_radar.add_trace(go.Scatterpolar(
     r=bronze,
     theta=categories,
-    fill='toself',
     name='Bronze',
-    line_color='brown'
+    fill='toself',
+    fillcolor='brown',
+    line=None,
+    mode='markers',
+    marker_color='brown'
 ))
 
 distribution_medals_radar.update_layout(
     polar=dict(
         radialaxis=dict(
             visible=True,
-            range=[0, 120]
+            range=[0, 120],
+            color='white'
         )),
         showlegend=True,
 )
 
 distribution_medals_radar.update_layout({
     'title': 'Distribution of medals by top five countries with the most medals',
-    'title_x': 0.4,
+    'title_x': 0.5,
     'plot_bgcolor': 'rgba(0, 0, 0, 0)',
     'paper_bgcolor': 'rgba(0, 0, 0, 0)',
-    'font_color': 'white'
+    'font_color': 'white',
 })
 
 distribution_medals_radar.write_html("public/python/graphs/distribution_medals_radar.html")
