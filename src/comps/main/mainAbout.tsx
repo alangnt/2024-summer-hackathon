@@ -8,17 +8,17 @@ export default function Main() {
             <section className='flex justify-between'>
                 <article>
                     <Image src="/profiles/profile-alan.jpg" alt='Profile picture of Alan' width={250} height={250}></Image>
-                    <p>Alan - @bxee</p>
-                </article>
-
-                <article>
-                    <Image src="/profiles/profile-alan.jpg" alt='Profile picture of Alan' width={250} height={250}></Image>
                     <p>Conrad - @dashes_</p>
                 </article>
 
                 <article>
                     <Image src="/profiles/profile-alan.jpg" alt='Profile picture of Alan' width={250} height={250}></Image>
                     <p>Milan - @Milan</p>
+                </article>
+
+                <article>
+                    <Image src="/profiles/profile-alan.jpg" alt='Profile picture of Alan' width={250} height={250}></Image>
+                    <p>Alan - @bxee</p>
                 </article>
             </section>
         </main>

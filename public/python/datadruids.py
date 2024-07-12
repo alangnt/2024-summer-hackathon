@@ -98,11 +98,6 @@ most_bronze_medals_pie.write_html("public/python/graphs/most_bronze_medals_pie.h
 # Distribution of medals by top five countries with the most medals
 # Define the data
 categories = ["USA", "Republic of China", "Russia Olympic Committee", "Great Britain", "Japan"]
-united_states_of_america = [39, 41, 33, 113]
-peoples_republic_of_china = [38, 32, 18, 88]
-roc = [20, 28, 23, 71]
-great_britain = [22, 21, 22, 65]
-japan = [27, 14, 17, 58]
 total = [113,88,71,65,58]
 gold = [39,38,20,22,27]
 silver = [41,32,28,21,14]
@@ -115,7 +110,7 @@ distribution_medals_radar.add_trace(go.Scatterpolar(
     r=total,
     theta=categories,
     fill='toself',
-    name='United States of America',
+    name='Total',
     line_color='blue'
 ))
 
@@ -123,7 +118,7 @@ distribution_medals_radar.add_trace(go.Scatterpolar(
     r=gold,
     theta=categories,
     fill='toself',
-    name='Republic of China',
+    name='Gold',
     line_color='yellow'
 ))
 
@@ -131,7 +126,7 @@ distribution_medals_radar.add_trace(go.Scatterpolar(
     r=silver,
     theta=categories,
     fill='toself',
-    name='Russia Olympic Committee',
+    name='Silver',
     line_color='grey'
 ))
 
@@ -140,7 +135,7 @@ distribution_medals_radar.add_trace(go.Scatterpolar(
     r=bronze,
     theta=categories,
     fill='toself',
-    name='Japan',
+    name='Bronze',
     line_color='brown'
 ))
 
