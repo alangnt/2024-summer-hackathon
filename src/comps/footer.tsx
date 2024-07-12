@@ -13,11 +13,11 @@ export default function Footer() {
                     <div className='flex gap-4'>
                         <div className='flex gap-2 h-4 justify-center items-center'>
                             <Image src="/socials/linkedin.png" alt="LinkedIn logo" width={16} height={16}></Image>
-                            <Link href="https://www.linkedin.com/in/conradwyrick">LinkedIn</Link>
+                            <Link href="https://www.linkedin.com/in/conradwyrick" target="_blank">LinkedIn</Link>
                         </div>
                         <div className='flex gap-2 h-4 justify-center items-center'>
                             <Image src="/socials/instagram.png" alt="Instagram logo" width={16} height={16}></Image>
-                            <Link href="https://www.instagram.com/con_radical/">Instagram</Link>
+                            <Link href="https://www.instagram.com/con_radical/" target="_blank">Instagram</Link>
                         </div>
                     </div>
                 </article>
@@ -27,11 +27,11 @@ export default function Footer() {
                     <div className='flex gap-4'>
                         <div className='flex gap-2 h-4 justify-center items-center'>
                             <Image src="/socials/linkedin.png" alt="LinkedIn logo" width={16} height={16}></Image>
-                            <Link href="https://www.linkedin.com/in/milan-grujicic-20ba05110/">LinkedIn</Link>
+                            <Link href="https://www.linkedin.com/in/milan-grujicic-20ba05110/" target="_blank">LinkedIn</Link>
                         </div>
                         <div className='flex gap-2 h-4 justify-center items-center'>
                             <Image src="/socials/github.png" alt="GitHub logo" width={16} height={16}></Image>
-                            <Link href="https://github.com/MilanGrujicic">GitHub</Link>
+                            <Link href="https://github.com/MilanGrujicic" target="_blank">GitHub</Link>
                         </div>
                     </div>
                 </article>
@@ -41,11 +41,11 @@ export default function Footer() {
                     <div className='flex gap-4'>
                         <div className='flex gap-2 h-4 justify-center items-center'>
                             <Image src="/socials/linkedin.png" alt="LinkedIn logo" width={16} height={16}></Image>
-                            <Link href="https://www.linkedin.com/in/alan-geirnaert/">LinkedIn</Link>
+                            <Link href="https://www.linkedin.com/in/alan-geirnaert/" target="_blank">LinkedIn</Link>
                         </div>
                         <div className='flex gap-2 h-4 justify-center items-center'>
                             <Image src="/socials/instagram.png" alt="Instagram logo" width={16} height={16}></Image>
-                            <Link href="https://www.instagram.com/gnt_alan/">Instagram</Link>
+                            <Link href="https://www.instagram.com/gnt_alan/" target="_blank">Instagram</Link>
                         </div>
                     </div>
                 </article>

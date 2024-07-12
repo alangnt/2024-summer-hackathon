@@ -1,16 +1,22 @@
 import * as Graphs from "@/comps/graphs";
 import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
 
     return (
         <main className="flex flex-col grow items-center gap-12 mt-12">
             <div className="flex flex-col items-center text-center w-3/4 gap-4">
-                <h3 className="text-2xl underline">Preliminary Analysis</h3>
-                <p className="text-center">We wanted to understand how we could use data from previous olympics to predict future olympics. This section showcases some analysis that we conducted using a dataset from the 2021 Tokyo Olympics.</p>
+                <h3 className="text-2xl underline">Introduction</h3>
+                <p>We are Team Data Druids, and we were tasked with predicting the winners of the 2024 Paris Olympics based on previous data. A significant portion of our data comes from the 2021 Tokyo Olympics. We analyzed historical data, visualized our results, and hypothesized how this data could be used to predict the outcomes of the 2024 Olympics. Our final step was to generate predictions for the 2024 Paris Olympics.</p>
             </div>
 
             <Image src="/medals/olympics.png" alt="Olympic medals pixelated" width={75} height={75}></Image>
+
+            <div className="flex flex-col items-center text-center w-3/4 gap-4">
+                <h3 className="text-2xl underline">Preliminary Analysis</h3>
+                <p className="text-center">We wanted to understand how we could use data from previous olympics to predict future olympics. This section showcases some analysis that we conducted using a dataset from the 2021 Tokyo Olympics.</p>
+            </div>
 
             {/* Section containing the four pies with TOT, GOLD, SILVER and BRONZE Counts */}
             <section className="flex justify-center flex-wrap w-screen gap-4">
@@ -60,16 +66,21 @@ export default function Home() {
                 </article>
             </section>
 
-            <h3 className="text-2xl">Random Forest Regressor model</h3>
-
             <Image src="/medals/bronze.png" alt="Bronze medal pixelated" width={75} height={75}></Image>
 
-            <section className="flex justify-center flex-wrap w-screen gap-4">
+            <h3 className="text-2xl">Random Forest Regressor model</h3>
+
+            <section className="flex justify-center flex-wrap w-screen gap-4 mb-8">
                 <p className="w-3/4 text-center">This random forest regressor model also displays the top 10 countries with the highest predicted total medals, but now is based on the number of athletes and coaches they sent to the 2021 Tokyo Olympics. Several improvements were made from the previous model. The inclusion of coaches data provides a more comprehensive view, and Grid Search was used to fine-tune the model. The model's mean absolute error is 0.5, and the R-squared value is 0.9, indicating that it performs well. This model is interactive and you can see more information when hovering over a section of the models.</p>
                 <article className="flex justify-center w-screen flex-wrap">
                     <Graphs.RandomForestBar />
                     <Graphs.RandomForestScatter />
                 </article>
+
+                <div className="flex gap-1">
+                    <p>If you want some more insights on the predictions for the 2024 Summer Olympics winners, you can follow this link to the</p>
+                    <Link href="https://colab.research.google.com/drive/1TuoC9Nlp5jnnUAZ2PwjfVFP-Xmaaokr6?authuser=1#scrollTo=3e-yF7IPYfT8" target="_blank" className="text-blue-500">Jupyter Notebook.</Link>
+                </div>
             </section>
 
             {/*<section>
