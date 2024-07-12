@@ -19,7 +19,7 @@ export default function Home() {
 
             <Graphs.MedalsPerCountryBar />
 
-            <Image src="/gold.png" alt="Gold medal pixelated" width={75} height={75}></Image>
+            <Image src="/medals/gold.png" alt="Gold medal pixelated" width={75} height={75}></Image>
 
             <section>
                 <h3 className="text-center">First, we tried to predict the winners using the Linear Regression method</h3>
@@ -30,7 +30,7 @@ export default function Home() {
                 </article>
             </section>
 
-            <Image src="/silver.png" alt="Silver medal pixelated" width={75} height={75}></Image>
+            <Image src="/medals/silver.png" alt="Silver medal pixelated" width={75} height={75}></Image>
 
             <section className="text-center">
                 <h3>Now, let's try again using the Random Forest method, -- EXPLAIN WHAT THIS IS</h3>
