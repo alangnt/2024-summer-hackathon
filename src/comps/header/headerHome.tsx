@@ -4,7 +4,7 @@ export default function Header() {
 
     return (
         <header className='flex mb-4'>
-            <h1 className='text-5xl'>Olympic Sages</h1>
+            <h1 className='text-5xl'>Olympic Sages by DataDruids</h1>
 
             <nav className='absolute right-4 flex gap-4 text-2xl'>
                 <Link href="/">Home</Link>
