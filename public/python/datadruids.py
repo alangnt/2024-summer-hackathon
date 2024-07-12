@@ -136,7 +136,7 @@ distribution_medals_radar.add_trace(go.Scatterpolar(
     fillcolor='grey',
     line=None,
     mode='markers',
-    marker_color='grey'
+    marker_color='lightgrey'
 ))
 
 
@@ -156,7 +156,7 @@ distribution_medals_radar.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 120],
-            color='white'
+            color='black'
         )),
         showlegend=True,
 )
