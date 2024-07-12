@@ -136,7 +136,7 @@ distribution_medals_radar.add_trace(go.Scatterpolar(
     fillcolor='grey',
     line=None,
     mode='markers',
-    marker_color='lightgrey'
+    marker_color='grey'
 ))
 
 
@@ -156,7 +156,7 @@ distribution_medals_radar.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 120],
-            color='black'
+            color='lightgrey'
         )),
         showlegend=True,
 )
@@ -182,7 +182,10 @@ medals_per_country_bar.update_layout({
     'paper_bgcolor': 'rgba(0, 0, 0, 0)',
     'font_color': 'white',
     'xaxis_showgrid': False,
+    'xaxis_title_text': 'Country/NOC',
+    'yaxis_title_text': 'Medals',
     'yaxis_showgrid': False,
+    'legend_title_text': 'Medals'
 })
 
 medals_per_country_bar.write_html("public/python/graphs/medals_per_country_bar.html")
