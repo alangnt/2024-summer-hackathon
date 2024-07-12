@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
 
     return (
-        <main className="flex flex-col grow items-center gap-12">
+        <main className="flex flex-col grow items-center gap-12 mt-12">
             <div className="flex flex-col items-center text-center w-3/4">
                 <h3>Preliminary Analysis</h3>
                 <p className="text-center">We wanted to understand how we could use data from previous olympics to predict future olympics. This section showcases some analysis that we conducted using a dataset from the 2021 Tokyo Olympics.</p>
