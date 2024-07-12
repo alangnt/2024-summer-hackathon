@@ -1,17 +1,17 @@
 export function MostTotalMedalsPie() {
-    return (<iframe src="/python/graphs/most_total_medals_pie.html" width={550} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_total_medals_pie.html" width={600} height={500} className=""></iframe>)
 }
 
 export function MostGoldMedalsPie() {
-    return (<iframe src="/python/graphs/most_gold_medals_pie.html" width={550} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_gold_medals_pie.html" width={600} height={500} className=""></iframe>)
 }
 
 export function MostSilverMedalsPie() {
-    return (<iframe src="/python/graphs/most_silver_medals_pie.html" width={550} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_silver_medals_pie.html" width={600} height={500} className=""></iframe>)
 }
 
 export function MostBronzeMedalsPie() {
-    return (<iframe src="/python/graphs/most_bronze_medals_pie.html" width={550} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/most_bronze_medals_pie.html" width={600} height={500} className=""></iframe>)
 }
 
 export function DistributionMedalsRadar() {
@@ -23,17 +23,17 @@ export function MedalsPerCountryBar() {
 }
 
 export function LinearRegressionBar() {
-    return (<iframe src="/python/graphs/linear_regression_bar.html" width={500} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/linear_regression_bar.html" width={600} height={500} className=""></iframe>)
 }
 
 export function LinearRegressionScatter() {
-    return (<iframe src="/python/graphs/linear_regression_scatter.html" width={500} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/linear_regression_scatter.html" width={600} height={500} className=""></iframe>)
 }
 
 export function RandomForestBar() {
-    return (<iframe src="/python/graphs/random_forest_bar.html" width={500} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/random_forest_bar.html" width={600} height={500} className=""></iframe>)
 }
 
 export function RandomForestScatter() {
-    return (<iframe src="/python/graphs/random_forest_scatter.html" width={500} height={500} className=""></iframe>)
+    return (<iframe src="/python/graphs/random_forest_scatter.html" width={600} height={500} className=""></iframe>)
 }
