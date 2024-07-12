@@ -156,7 +156,7 @@ distribution_medals_radar.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 120],
-            color='lightgrey'
+            color='green'
         )),
         showlegend=True,
 )
@@ -316,6 +316,7 @@ combined_df = combined_df.sort_values('Predicted_Total_Medals', ascending=False)
 
 # Display the top predictions
 print(combined_df[['NOC', 'Athlete_Count', 'Coach_Count', 'Predicted_Total_Medals']].head(10))
+
 
 
 # Predicted TOP10 Countries by Predicted Total Medals in 2024 Olympics
