@@ -5,18 +5,25 @@ export default function Home() {
 
     return (
         <main className="flex flex-col grow items-center gap-12">
-            <h3 className="text-center">We wanted to understand how we could use data from previous olympics to predict future olympics. This section showcases some analysis that we conducted using a dataset from the 2021 Tokyo Olympics.</h3>
+            <div className="flex flex-col items-center text-center w-3/4">
+                <h3>Preliminary Analysis</h3>
+                <p className="text-center">We wanted to understand how we could use data from previous olympics to predict future olympics. This section showcases some analysis that we conducted using a dataset from the 2021 Tokyo Olympics.</p>
+            </div>
 
             <Image src="/medals/olympics.png" alt="Olympic medals pixelated" width={75} height={75}></Image>
 
             {/* Section containing the four pies with TOT, GOLD, SILVER and BRONZE Counts */}
             <section className="flex justify-center flex-wrap w-screen gap-4">
                 <p className="w-3/4 text-center">We have created four interactive pie charts showcasing the top ten countries in various medal categories. These charts allow you to see the number of medals each country won by hovering over the respective segments. Additionally, you can toggle countries on and off to observe how this affects the overall medal distribution.</p>
-                <article className="flex justify-center flex-wrap">
-                    <Graphs.MostTotalMedalsPie />
-                    <Graphs.MostGoldMedalsPie />
-                    <Graphs.MostSilverMedalsPie />
-                    <Graphs.MostBronzeMedalsPie />
+                <article className="flex flex-col items-center">
+                    <div className="flex small-screens">
+                        <Graphs.MostTotalMedalsPie />
+                        <Graphs.MostGoldMedalsPie />
+                    </div>
+                    <div className="flex small-screens">
+                        <Graphs.MostSilverMedalsPie />
+                        <Graphs.MostBronzeMedalsPie />
+                    </div>
                 </article>
             </section>
 

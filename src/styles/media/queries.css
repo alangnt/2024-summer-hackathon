@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media screen and (min-width: 1086px) {
+  .small-screens {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  .small-screens {
+    flex-direction: column;
+  }
+}
