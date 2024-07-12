@@ -35,11 +35,15 @@ export default function Home() {
                 <Graphs.MedalsPerCountryBar />
             </section>
 
+            <section className="flex justify-center flex-wrap w-screen gap-4">
+                <p className="w-3/4 text-center">We have created a stacked bar chart featuring all the countries that participated in the 2021 Tokyo Olympics, displaying their respective gold, silver, and bronze medals. You can toggle each medal category to see how the countries compare to one another.</p>
+                <Graphs.MedalsPerCountryBar />
+            </section>
+
             <Image src="/medals/silver.png" alt="Silver medal pixelated" width={75} height={75}></Image>
 
-            <section>
-                <h3 className="text-center">First, we tried to predict the winners using the Linear Regression method</h3>
-
+            <section className="flex justify-center flex-wrap w-screen gap-4">
+                <p className="w-3/4 text-center">This linear regression model displays the top 10 countries with the highest predicted total medals based on the number of athletes they sent to the 2021 Tokyo Olympics. The model's mean absolute error is 2.8, and the R-squared value is -0.8, indicating that the model did not perform well. Improvements will be needed moving forward. This model is interactive and you can see more information when hovering over a section of the models.</p>
                 <article className="flex justify-center w-screen flex-wrap">
                     <Graphs.LinearRegressionBar />
                     <Graphs.LinearRegressionScatter />
@@ -48,9 +52,8 @@ export default function Home() {
 
             <Image src="/medals/bronze.png" alt="Bronze medal pixelated" width={75} height={75}></Image>
 
-            <section className="text-center">
-                <h3>Now, let's try again using the Random Forest method, -- EXPLAIN WHAT THIS IS</h3>
-
+            <section className="flex justify-center flex-wrap w-screen gap-4">
+                <p className="w-3/4 text-center">This random forest regressor model also displays the top 10 countries with the highest predicted total medals, but now is based on the number of athletes and coaches they sent to the 2021 Tokyo Olympics. Several improvements were made from the previous model. The inclusion of coaches data provides a more comprehensive view, and Grid Search was used to fine-tune the model. The model's mean absolute error is 0.5, and the R-squared value is 0.9, indicating that it performs well. This model is interactive and you can see more information when hovering over a section of the models.</p>
                 <article className="flex justify-center w-screen flex-wrap">
                     <Graphs.RandomForestBar />
                     <Graphs.RandomForestScatter />

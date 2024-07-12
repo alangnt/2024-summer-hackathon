@@ -7,8 +7,8 @@ export default function Header() {
             <h1 className='text-5xl'>About Us</h1>
 
             <nav className='absolute right-4 flex gap-4 text-2xl'>
-                <Link href="/">Home</Link>
-                <Link href="/about-us">About Us</Link>
+                <Link href="/" className='hover:scale-110'>Home</Link>
+                <Link href="/about-us" className='hover:scale-110'>About Us</Link>
             </nav>
         </header>
     )
