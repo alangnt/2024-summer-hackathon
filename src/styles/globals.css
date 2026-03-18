@@ -1,7 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url("./media/queries.css");
+@import "tailwindcss";
 
 *,
 *::before,
